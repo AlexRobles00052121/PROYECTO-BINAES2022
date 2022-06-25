@@ -87,6 +87,8 @@ namespace proyecto
 
         private void FrmPrincipal1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bINAESDataSet2.EVENTO' Puede moverla o quitarla según sea necesario.
+            this.eVENTOTableAdapter.Fill(this.bINAESDataSet2.EVENTO);
             // TODO: esta línea de código carga datos en la tabla 'bINAESDataSet1.EJEMPLAR' Puede moverla o quitarla según sea necesario.
             this.eJEMPLARTableAdapter.Fill(this.bINAESDataSet1.EJEMPLAR);
 
@@ -106,6 +108,22 @@ namespace proyecto
 
             dataGridView1.DataSource = data;
             dataGridView1.DataMember = "EJEMPLAR";
+        }
+
+        private void textBox24_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection connect = new SqlConnection(Properties.Settings.Default.conexion);
+            String query = "select * from EVENTO where "+ comboBox2.Text + " like '%"+ textBox24.Text + "%' ";
+            SqlDataAdapter ada = new SqlDataAdapter(query, connect);
+
+            connect.Open();
+
+            BINAESDataSet datos = new BINAESDataSet();
+
+            ada.Fill(datos, "EVENTO");
+
+            dataGridView2.DataSource = datos;
+            dataGridView2.DataMember = "EVENTO";
         }
     }
 }

@@ -120,9 +120,6 @@
   <metadata name="mstMenuSuperior.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="mstMenuSuperior.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1706,6 +1703,9 @@
         xNbX/wBGrX6XSfNEMHGM/wA6/NX4bg/8LH8LZOP+Jra/+jVr9JpnIjcY/gJGKxnuVE//2Q==
 </value>
   </data>
+  <metadata name="eVENTOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>992, 17</value>
+  </metadata>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA/gAAAJECAIAAAAtxhh6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABM
@@ -4382,7 +4382,7 @@
   <data name="btnAddUserToBD.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJ4AAAAxCAYAAAArzxBAAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAC2hJREFUeF7tnQlXU9cWx/0gXf0Q1afWtq6u1le1trYWrW0dqIqoOCAVqyjtKqAt
+        vwAADr8BOAVTJAAAC2hJREFUeF7tnQlXU9cWx/0gXf0Q1afWtq6u1le1trYWrW0dqIqoOCAVqyjtKqAt
         Dk9RVIpaEYQqqFRUKCCjDJIwE+Z5SiBABmaE6P+dfZJcSXO1QnPzdL2z1/qtcM/Zd5+dnH/OdFkrc+Rs
         adC9RYxIRiVDz4BAMANIM+WMCMZbNlk935jTmytC0wvW36iFT64RfiUT2F8NgWDGkHZ8cg0gLX0cmpbJ
         tPWGTWaOxirmr7mkHvQrZWLTPBUIXAZpas2lYgNpzCY3q9FIt+aienBfxRT8Ky0CgcshbZHGSGs22c2Z
@@ -4439,6 +4439,15 @@
   </metadata>
   <metadata name="editorialTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>675, 17</value>
+  </metadata>
+  <metadata name="bINAESDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>851, 17</value>
+  </metadata>
+  <metadata name="eVENTOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>992, 17</value>
+  </metadata>
+  <metadata name="eVENTOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
