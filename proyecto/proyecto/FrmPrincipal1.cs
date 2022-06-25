@@ -12,7 +12,7 @@ namespace proyecto
         {
             InitializeComponent();
         }
-        
+
         private void btnSolocitarEvento_Click(object sender, EventArgs e)
         {
             tabPrincipal.SelectedIndex = 3;
@@ -25,7 +25,7 @@ namespace proyecto
 
         private void btnEliminarEvento_Click(object sender, EventArgs e)
         {
-            tabPrincipal.SelectedIndex = 5;
+            tabPrincipal.SelectedIndex = 2;
         }
 
         private void btnListarEvento_Click(object sender, EventArgs e)
@@ -37,17 +37,16 @@ namespace proyecto
         {
             Application.Exit();
         }
-        
+
         private void btnConnectBibliotec_Click(object sender, EventArgs e)
         {
-            tabPrincipal.SelectedIndex = 2;
+            tabPrincipal.SelectedIndex = 5;
         }
 
         private void btnConnectEvent_Click(object sender, EventArgs e)
         {
             tabPrincipal.SelectedIndex = 1;
         }
-
 
         private void btnConnectInicio_Click(object sender, EventArgs e)
         {
@@ -68,10 +67,10 @@ namespace proyecto
         {
             string contenido = txtTelefono.Text;
             QRCodeGenerator qrGenerador = new QRCodeGenerator();
-            QRCodeData qrDatos = qrGenerador.CreateQrCode(contenido,QRCodeGenerator.ECCLevel.H);
+            QRCodeData qrDatos = qrGenerador.CreateQrCode(contenido, QRCodeGenerator.ECCLevel.H);
             QRCode qrCodigo = new QRCode(qrDatos);
 
-            Image qrImagen = qrCodigo.GetGraphic(5, Color.Black, Color.White,true);
+            Image qrImagen = qrCodigo.GetGraphic(5, Color.Black, Color.White, true);
             codigito.Image = qrImagen;
         }
 
@@ -79,107 +78,34 @@ namespace proyecto
         {
             OpenFileDialog dialog = new OpenFileDialog();
             DialogResult result = dialog.ShowDialog();
-            
+
             if (result == DialogResult.OK)
             {
                 pictureBox2.Image = Image.FromFile(dialog.FileName);
             }
         }
 
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        private void FrmPrincipal1_Load(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            // TODO: esta línea de código carga datos en la tabla 'bINAESDataSet1.EJEMPLAR' Puede moverla o quitarla según sea necesario.
+            this.eJEMPLARTableAdapter.Fill(this.bINAESDataSet1.EJEMPLAR);
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
-        }
+            SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion);
+            String query = "select * from EJEMPLAR where "+ comboBox1.Text + " like '%"+ textBox1.Text + "%' ";
+            SqlDataAdapter ada = new SqlDataAdapter(query, con);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+            con.Open();
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+            BINAESDataSet data = new BINAESDataSet();
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+            ada.Fill(data, "EJEMPLAR");
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void tableLayoutPanel4_Paint_1(object sender, PaintEventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void checkBox19_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void codigito_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+            dataGridView1.DataSource = data;
+            dataGridView1.DataMember = "EJEMPLAR";
         }
     }
-    
 }

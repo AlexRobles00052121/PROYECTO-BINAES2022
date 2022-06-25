@@ -27,9 +27,9 @@ namespace proyecto.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=BINAES;Integrated Security=True")]
-        public string Valor {
+        public string conexion {
             get {
-                return ((string)(this["Valor"]));
+                return ((string)(this["conexion"]));
             }
         }
     }
