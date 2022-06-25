@@ -1,0 +1,14 @@
+C:\Users\jimen\Downloads\proyecto\proyecto\bin\Release\proyecto.exe.config
+C:\Users\jimen\Downloads\proyecto\proyecto\bin\Release\proyecto.exe
+C:\Users\jimen\Downloads\proyecto\proyecto\bin\Release\proyecto.pdb
+C:\Users\jimen\Downloads\proyecto\proyecto\bin\Release\QRCoder.dll
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.csproj.AssemblyReference.cache
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.FrmIniciodeSesion.resources
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.FrmPrincipal1.resources
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.Properties.Resources.resources
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.csproj.GenerateResource.cache
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.csproj.CoreCompileInputs.cache
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.csproj.CopyComplete
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.exe
+C:\Users\jimen\Downloads\proyecto\proyecto\obj\Release\proyecto.pdb
