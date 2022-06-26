@@ -125,5 +125,10 @@ namespace proyecto
             dataGridView2.DataSource = datos;
             dataGridView2.DataMember = "EVENTO";
         }
+
+        private void ConnectInfo_Click(object sender, EventArgs e)
+        {
+            tabPrincipal.SelectedIndex = 9;
+        }
     }
 }

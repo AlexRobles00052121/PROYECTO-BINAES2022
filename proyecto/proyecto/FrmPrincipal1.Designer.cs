@@ -52,6 +52,18 @@ namespace proyecto
             this.tabInicio = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabEventos = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.objetivosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadAsistentesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idImagenesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eVENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bINAESDataSet2 = new proyecto.BINAESDataSet2();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.tabDeleteEvent = new System.Windows.Forms.TabPage();
             this.tabSolicitarEvento = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -204,19 +216,16 @@ namespace proyecto
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.eJEMPLARTableAdapter = new proyecto.BINAESDataSet1TableAdapters.EJEMPLARTableAdapter();
             this.editorialTableAdapter1 = new proyecto.BINAESDataSetTableAdapters.EDITORIALTableAdapter();
-            this.label39 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bINAESDataSet2 = new proyecto.BINAESDataSet2();
-            this.eVENTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eVENTOTableAdapter = new proyecto.BINAESDataSet2TableAdapters.EVENTOTableAdapter();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tituloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.objetivosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadAsistentesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idAreaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idImagenesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InformaciónBinaes = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.ConnectInfo = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.mstMenuSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -224,6 +233,9 @@ namespace proyecto
             this.tabInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabEventos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bINAESDataSet2)).BeginInit();
             this.tabSolicitarEvento.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -253,9 +265,8 @@ namespace proyecto
             this.tabPrestamoLibro.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bINAESDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).BeginInit();
+            this.InformaciónBinaes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -325,7 +336,7 @@ namespace proyecto
             // prestamoDeLibrosToolStripMenuItem
             // 
             this.prestamoDeLibrosToolStripMenuItem.Name = "prestamoDeLibrosToolStripMenuItem";
-            this.prestamoDeLibrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prestamoDeLibrosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.prestamoDeLibrosToolStripMenuItem.Text = "Prestamo de Libros";
             this.prestamoDeLibrosToolStripMenuItem.Click += new System.EventHandler(this.btnPrestarLibros_Click);
             // 
@@ -405,6 +416,7 @@ namespace proyecto
             this.tabPrincipal.Controls.Add(this.tablisitEvent);
             this.tabPrincipal.Controls.Add(this.tabAddUser);
             this.tabPrincipal.Controls.Add(this.tabPrestamoLibro);
+            this.tabPrincipal.Controls.Add(this.InformaciónBinaes);
             this.tabPrincipal.ItemSize = new System.Drawing.Size(80, 20);
             this.tabPrincipal.Location = new System.Drawing.Point(3, 72);
             this.tabPrincipal.Name = "tabPrincipal";
@@ -416,6 +428,7 @@ namespace proyecto
             // 
             // tabInicio
             // 
+            this.tabInicio.Controls.Add(this.ConnectInfo);
             this.tabInicio.Controls.Add(this.pictureBox3);
             this.tabInicio.Location = new System.Drawing.Point(4, 24);
             this.tabInicio.Name = "tabInicio";
@@ -449,6 +462,98 @@ namespace proyecto
             this.tabEventos.Text = "Eventos";
             this.tabEventos.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.tituloDataGridViewTextBoxColumn,
+            this.objetivosDataGridViewTextBoxColumn,
+            this.cantidadAsistentesDataGridViewTextBoxColumn,
+            this.idAreaDataGridViewTextBoxColumn,
+            this.idImagenesDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.eVENTOBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 36);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1007, 545);
+            this.dataGridView2.TabIndex = 3;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            // 
+            // tituloDataGridViewTextBoxColumn
+            // 
+            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "Titulo";
+            this.tituloDataGridViewTextBoxColumn.HeaderText = "Titulo";
+            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
+            // 
+            // objetivosDataGridViewTextBoxColumn
+            // 
+            this.objetivosDataGridViewTextBoxColumn.DataPropertyName = "Objetivos";
+            this.objetivosDataGridViewTextBoxColumn.HeaderText = "Objetivos";
+            this.objetivosDataGridViewTextBoxColumn.Name = "objetivosDataGridViewTextBoxColumn";
+            // 
+            // cantidadAsistentesDataGridViewTextBoxColumn
+            // 
+            this.cantidadAsistentesDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Asistentes";
+            this.cantidadAsistentesDataGridViewTextBoxColumn.HeaderText = "Cantidad_Asistentes";
+            this.cantidadAsistentesDataGridViewTextBoxColumn.Name = "cantidadAsistentesDataGridViewTextBoxColumn";
+            // 
+            // idAreaDataGridViewTextBoxColumn
+            // 
+            this.idAreaDataGridViewTextBoxColumn.DataPropertyName = "id_Area";
+            this.idAreaDataGridViewTextBoxColumn.HeaderText = "id_Area";
+            this.idAreaDataGridViewTextBoxColumn.Name = "idAreaDataGridViewTextBoxColumn";
+            // 
+            // idImagenesDataGridViewTextBoxColumn
+            // 
+            this.idImagenesDataGridViewTextBoxColumn.DataPropertyName = "id_Imagenes";
+            this.idImagenesDataGridViewTextBoxColumn.HeaderText = "id_Imagenes";
+            this.idImagenesDataGridViewTextBoxColumn.Name = "idImagenesDataGridViewTextBoxColumn";
+            // 
+            // eVENTOBindingSource
+            // 
+            this.eVENTOBindingSource.DataMember = "EVENTO";
+            this.eVENTOBindingSource.DataSource = this.bINAESDataSet2;
+            // 
+            // bINAESDataSet2
+            // 
+            this.bINAESDataSet2.DataSetName = "BINAESDataSet2";
+            this.bINAESDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Titulo",
+            "Objetivos"});
+            this.comboBox2.Location = new System.Drawing.Point(707, 8);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Location = new System.Drawing.Point(113, 6);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(588, 20);
+            this.textBox24.TabIndex = 1;
+            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(6, 3);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(95, 23);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "Eventos";
+            // 
             // tabDeleteEvent
             // 
             this.tabDeleteEvent.Location = new System.Drawing.Point(4, 24);
@@ -480,7 +585,7 @@ namespace proyecto
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
             this.tableLayoutPanel5.Controls.Add(this.groupBox4, 3, 4);
             this.tableLayoutPanel5.Controls.Add(this.groupBox3, 2, 4);
             this.tableLayoutPanel5.Controls.Add(this.label14, 0, 1);
@@ -532,7 +637,7 @@ namespace proyecto
             this.groupBox4.Controls.Add(this.checkBox7);
             this.groupBox4.Controls.Add(this.checkBox9);
             this.groupBox4.Controls.Add(this.checkBox10);
-            this.groupBox4.Location = new System.Drawing.Point(281, 116);
+            this.groupBox4.Location = new System.Drawing.Point(280, 116);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(131, 95);
             this.groupBox4.TabIndex = 9;
@@ -571,7 +676,7 @@ namespace proyecto
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.checkBox8);
-            this.groupBox3.Location = new System.Drawing.Point(180, 133);
+            this.groupBox3.Location = new System.Drawing.Point(179, 133);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(95, 78);
             this.groupBox3.TabIndex = 8;
@@ -594,7 +699,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.Location = new System.Drawing.Point(3, 18);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 26);
+            this.label14.Size = new System.Drawing.Size(69, 26);
             this.label14.TabIndex = 1;
             this.label14.Text = "Nombre Completo";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -606,7 +711,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Location = new System.Drawing.Point(3, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 126);
+            this.label1.Size = new System.Drawing.Size(69, 126);
             this.label1.TabIndex = 0;
             this.label1.Text = "Area";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -618,7 +723,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.Location = new System.Drawing.Point(3, 62);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 26);
+            this.label11.Size = new System.Drawing.Size(69, 26);
             this.label11.TabIndex = 3;
             this.label11.Text = "Correo";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -627,7 +732,7 @@ namespace proyecto
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox4, 4);
             this.textBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox4.Location = new System.Drawing.Point(79, 65);
+            this.textBox4.Location = new System.Drawing.Point(78, 65);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(465, 20);
             this.textBox4.TabIndex = 4;
@@ -636,7 +741,7 @@ namespace proyecto
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox5, 4);
             this.textBox5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.textBox5.Location = new System.Drawing.Point(79, 21);
+            this.textBox5.Location = new System.Drawing.Point(78, 21);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(465, 20);
             this.textBox5.TabIndex = 2;
@@ -648,7 +753,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.checkBox6);
             this.groupBox2.Controls.Add(this.checkBox5);
-            this.groupBox2.Location = new System.Drawing.Point(79, 116);
+            this.groupBox2.Location = new System.Drawing.Point(78, 116);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(95, 95);
             this.groupBox2.TabIndex = 7;
@@ -680,7 +785,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.Location = new System.Drawing.Point(3, 300);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(70, 35);
+            this.label26.Size = new System.Drawing.Size(69, 35);
             this.label26.TabIndex = 15;
             this.label26.Text = "Fecha y Hora de inicio";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -688,7 +793,7 @@ namespace proyecto
             // textBox13
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox13, 2);
-            this.textBox13.Location = new System.Drawing.Point(79, 303);
+            this.textBox13.Location = new System.Drawing.Point(78, 303);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(196, 20);
             this.textBox13.TabIndex = 17;
@@ -698,7 +803,7 @@ namespace proyecto
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label27.Location = new System.Drawing.Point(418, 300);
+            this.label27.Location = new System.Drawing.Point(417, 300);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(126, 35);
             this.label27.TabIndex = 16;
@@ -708,7 +813,7 @@ namespace proyecto
             // textBox14
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox14, 2);
-            this.textBox14.Location = new System.Drawing.Point(550, 303);
+            this.textBox14.Location = new System.Drawing.Point(549, 303);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(253, 20);
             this.textBox14.TabIndex = 18;
@@ -720,7 +825,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.Location = new System.Drawing.Point(3, 245);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(70, 29);
+            this.label25.Size = new System.Drawing.Size(69, 29);
             this.label25.TabIndex = 14;
             this.label25.Text = "Titulo del evento";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -728,7 +833,7 @@ namespace proyecto
             // textBox15
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox15, 3);
-            this.textBox15.Location = new System.Drawing.Point(79, 248);
+            this.textBox15.Location = new System.Drawing.Point(78, 248);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(333, 20);
             this.textBox15.TabIndex = 19;
@@ -739,7 +844,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.label28, 2);
-            this.label28.Location = new System.Drawing.Point(281, 335);
+            this.label28.Location = new System.Drawing.Point(280, 335);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(263, 36);
             this.label28.TabIndex = 20;
@@ -749,7 +854,7 @@ namespace proyecto
             // textBox16
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox16, 4);
-            this.textBox16.Location = new System.Drawing.Point(180, 374);
+            this.textBox16.Location = new System.Drawing.Point(179, 374);
             this.textBox16.Multiline = true;
             this.textBox16.Name = "textBox16";
             this.tableLayoutPanel5.SetRowSpan(this.textBox16, 2);
@@ -759,7 +864,7 @@ namespace proyecto
             // textBox17
             // 
             this.tableLayoutPanel5.SetColumnSpan(this.textBox17, 2);
-            this.textBox17.Location = new System.Drawing.Point(180, 468);
+            this.textBox17.Location = new System.Drawing.Point(179, 468);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(110, 20);
             this.textBox17.TabIndex = 23;
@@ -770,7 +875,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label29.Location = new System.Drawing.Point(79, 429);
+            this.label29.Location = new System.Drawing.Point(78, 429);
             this.label29.Name = "label29";
             this.tableLayoutPanel5.SetRowSpan(this.label29, 2);
             this.label29.Size = new System.Drawing.Size(95, 63);
@@ -780,7 +885,7 @@ namespace proyecto
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(809, 21);
+            this.button3.Location = new System.Drawing.Point(808, 21);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 20);
             this.button3.TabIndex = 24;
@@ -794,7 +899,7 @@ namespace proyecto
             this.groupBox5.Controls.Add(this.checkBox15);
             this.groupBox5.Controls.Add(this.checkBox13);
             this.groupBox5.Controls.Add(this.checkBox11);
-            this.groupBox5.Location = new System.Drawing.Point(418, 91);
+            this.groupBox5.Location = new System.Drawing.Point(417, 91);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(126, 120);
             this.groupBox5.TabIndex = 10;
@@ -833,7 +938,7 @@ namespace proyecto
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.checkBox14);
-            this.groupBox6.Location = new System.Drawing.Point(550, 133);
+            this.groupBox6.Location = new System.Drawing.Point(549, 133);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(125, 78);
             this.groupBox6.TabIndex = 11;
@@ -854,7 +959,7 @@ namespace proyecto
             this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.checkBox16);
-            this.groupBox7.Location = new System.Drawing.Point(681, 133);
+            this.groupBox7.Location = new System.Drawing.Point(680, 133);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(122, 78);
             this.groupBox7.TabIndex = 12;
@@ -876,7 +981,7 @@ namespace proyecto
             this.groupBox8.Controls.Add(this.checkBox19);
             this.groupBox8.Controls.Add(this.checkBox17);
             this.groupBox8.Controls.Add(this.checkBox18);
-            this.groupBox8.Location = new System.Drawing.Point(809, 91);
+            this.groupBox8.Location = new System.Drawing.Point(808, 91);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(126, 120);
             this.groupBox8.TabIndex = 13;
@@ -1525,7 +1630,7 @@ namespace proyecto
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.84848F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.15152F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 470F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 471F));
             this.tableLayoutPanel3.Controls.Add(this.txtTelefono, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 1);
@@ -1560,7 +1665,7 @@ namespace proyecto
             // txtTelefono
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTelefono.Location = new System.Drawing.Point(559, 9);
+            this.txtTelefono.Location = new System.Drawing.Point(558, 9);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(411, 20);
             this.txtTelefono.TabIndex = 13;
@@ -1571,7 +1676,7 @@ namespace proyecto
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 26);
+            this.label2.Size = new System.Drawing.Size(142, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1582,7 +1687,7 @@ namespace proyecto
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 27);
+            this.label3.Size = new System.Drawing.Size(142, 27);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ocupación";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1593,7 +1698,7 @@ namespace proyecto
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 25);
+            this.label4.Size = new System.Drawing.Size(142, 25);
             this.label4.TabIndex = 2;
             this.label4.Text = "Dirección:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1602,7 +1707,7 @@ namespace proyecto
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(335, 6);
+            this.label6.Location = new System.Drawing.Point(334, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(191, 26);
             this.label6.TabIndex = 4;
@@ -1613,7 +1718,7 @@ namespace proyecto
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(335, 45);
+            this.label7.Location = new System.Drawing.Point(334, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(191, 27);
             this.label7.TabIndex = 5;
@@ -1624,7 +1729,7 @@ namespace proyecto
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(335, 94);
+            this.label8.Location = new System.Drawing.Point(334, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(191, 25);
             this.label8.TabIndex = 6;
@@ -1634,7 +1739,7 @@ namespace proyecto
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(152, 9);
+            this.txtNombre.Location = new System.Drawing.Point(151, 9);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(177, 20);
             this.txtNombre.TabIndex = 7;
@@ -1642,7 +1747,7 @@ namespace proyecto
             // txtOcupación
             // 
             this.txtOcupación.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtOcupación.Location = new System.Drawing.Point(152, 49);
+            this.txtOcupación.Location = new System.Drawing.Point(151, 49);
             this.txtOcupación.Name = "txtOcupación";
             this.txtOcupación.Size = new System.Drawing.Size(177, 20);
             this.txtOcupación.TabIndex = 9;
@@ -1650,7 +1755,7 @@ namespace proyecto
             // txtInstitución
             // 
             this.txtInstitución.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInstitución.Location = new System.Drawing.Point(152, 155);
+            this.txtInstitución.Location = new System.Drawing.Point(151, 155);
             this.txtInstitución.Name = "txtInstitución";
             this.txtInstitución.Size = new System.Drawing.Size(177, 20);
             this.txtInstitución.TabIndex = 11;
@@ -1664,7 +1769,7 @@ namespace proyecto
             this.btnAddUserToBD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddUserToBD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddUserToBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUserToBD.Location = new System.Drawing.Point(682, 138);
+            this.btnAddUserToBD.Location = new System.Drawing.Point(681, 138);
             this.btnAddUserToBD.Name = "btnAddUserToBD";
             this.btnAddUserToBD.Size = new System.Drawing.Size(165, 55);
             this.btnAddUserToBD.TabIndex = 14;
@@ -1674,7 +1779,7 @@ namespace proyecto
             // txtDirección
             // 
             this.txtDirección.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDirección.Location = new System.Drawing.Point(152, 97);
+            this.txtDirección.Location = new System.Drawing.Point(151, 97);
             this.txtDirección.Name = "txtDirección";
             this.txtDirección.Size = new System.Drawing.Size(177, 20);
             this.txtDirección.TabIndex = 10;
@@ -1682,7 +1787,7 @@ namespace proyecto
             // txtCorreo
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCorreo.Location = new System.Drawing.Point(560, 97);
+            this.txtCorreo.Location = new System.Drawing.Point(559, 97);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(409, 20);
             this.txtCorreo.TabIndex = 12;
@@ -1692,7 +1797,7 @@ namespace proyecto
             this.codigito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.codigito.Location = new System.Drawing.Point(152, 199);
+            this.codigito.Location = new System.Drawing.Point(151, 199);
             this.codigito.Name = "codigito";
             this.codigito.Size = new System.Drawing.Size(177, 219);
             this.codigito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1706,7 +1811,7 @@ namespace proyecto
             this.QR.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QR.Location = new System.Drawing.Point(3, 196);
             this.QR.Name = "QR";
-            this.QR.Size = new System.Drawing.Size(143, 225);
+            this.QR.Size = new System.Drawing.Size(142, 225);
             this.QR.TabIndex = 15;
             this.QR.Text = "Codigo QR:";
             this.QR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1715,7 +1820,7 @@ namespace proyecto
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(559, 42);
+            this.button1.Location = new System.Drawing.Point(558, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(411, 34);
             this.button1.TabIndex = 17;
@@ -1729,7 +1834,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(335, 196);
+            this.label9.Location = new System.Drawing.Point(334, 196);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(191, 225);
             this.label9.TabIndex = 18;
@@ -1752,7 +1857,7 @@ namespace proyecto
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(3, 146);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 39);
+            this.label5.Size = new System.Drawing.Size(142, 39);
             this.label5.TabIndex = 3;
             this.label5.Text = "Institución:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1774,7 +1879,7 @@ namespace proyecto
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.88235F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.11765F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 495F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 227F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 228F));
             this.tableLayoutPanel4.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label16, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label17, 1, 4);
@@ -1834,7 +1939,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.Location = new System.Drawing.Point(162, 66);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(120, 29);
+            this.label16.Size = new System.Drawing.Size(119, 29);
             this.label16.TabIndex = 1;
             this.label16.Text = "Nombre Completo";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1846,21 +1951,21 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.Location = new System.Drawing.Point(162, 115);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(120, 31);
+            this.label17.Size = new System.Drawing.Size(119, 31);
             this.label17.TabIndex = 2;
             this.label17.Text = "Email";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(288, 69);
+            this.textBox6.Location = new System.Drawing.Point(287, 69);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(333, 20);
             this.textBox6.TabIndex = 3;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(288, 118);
+            this.textBox7.Location = new System.Drawing.Point(287, 118);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(333, 20);
             this.textBox7.TabIndex = 4;
@@ -1872,14 +1977,14 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.Location = new System.Drawing.Point(162, 160);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(120, 30);
+            this.label18.Size = new System.Drawing.Size(119, 30);
             this.label18.TabIndex = 5;
             this.label18.Text = "ID";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(288, 163);
+            this.textBox8.Location = new System.Drawing.Point(287, 163);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(153, 20);
             this.textBox8.TabIndex = 6;
@@ -1896,14 +2001,14 @@ namespace proyecto
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(288, 232);
+            this.textBox9.Location = new System.Drawing.Point(287, 232);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(153, 20);
             this.textBox9.TabIndex = 10;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(288, 269);
+            this.textBox10.Location = new System.Drawing.Point(287, 269);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(153, 20);
             this.textBox10.TabIndex = 11;
@@ -1913,7 +2018,7 @@ namespace proyecto
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.Location = new System.Drawing.Point(162, 357);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(120, 27);
+            this.label21.Size = new System.Drawing.Size(119, 27);
             this.label21.TabIndex = 9;
             this.label21.Text = "Fecha de la devolución";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1937,7 +2042,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.Location = new System.Drawing.Point(162, 332);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(120, 25);
+            this.label23.Size = new System.Drawing.Size(119, 25);
             this.label23.TabIndex = 13;
             this.label23.Text = "Fecha del préstamo";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1949,7 +2054,7 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.Location = new System.Drawing.Point(162, 229);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(120, 25);
+            this.label24.Size = new System.Drawing.Size(119, 25);
             this.label24.TabIndex = 14;
             this.label24.Text = "Nombre del Ejemplar";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1961,28 +2066,28 @@ namespace proyecto
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.Location = new System.Drawing.Point(162, 266);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(120, 25);
+            this.label20.Size = new System.Drawing.Size(119, 25);
             this.label20.TabIndex = 8;
             this.label20.Text = "ID";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(288, 335);
+            this.textBox11.Location = new System.Drawing.Point(287, 335);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(153, 20);
             this.textBox11.TabIndex = 15;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(288, 360);
+            this.textBox12.Location = new System.Drawing.Point(287, 360);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(153, 20);
             this.textBox12.TabIndex = 16;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(783, 3);
+            this.button4.Location = new System.Drawing.Point(782, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 40);
             this.button4.TabIndex = 17;
@@ -2121,101 +2226,99 @@ namespace proyecto
             // 
             this.editorialTableAdapter1.ClearBeforeFill = true;
             // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(6, 3);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(95, 23);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "Eventos";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(113, 6);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(588, 20);
-            this.textBox24.TabIndex = 1;
-            this.textBox24.TextChanged += new System.EventHandler(this.textBox24_TextChanged);
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Titulo",
-            "Objetivos"});
-            this.comboBox2.Location = new System.Drawing.Point(707, 8);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.tituloDataGridViewTextBoxColumn,
-            this.objetivosDataGridViewTextBoxColumn,
-            this.cantidadAsistentesDataGridViewTextBoxColumn,
-            this.idAreaDataGridViewTextBoxColumn,
-            this.idImagenesDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.eVENTOBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 36);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1007, 545);
-            this.dataGridView2.TabIndex = 3;
-            // 
-            // bINAESDataSet2
-            // 
-            this.bINAESDataSet2.DataSetName = "BINAESDataSet2";
-            this.bINAESDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eVENTOBindingSource
-            // 
-            this.eVENTOBindingSource.DataMember = "EVENTO";
-            this.eVENTOBindingSource.DataSource = this.bINAESDataSet2;
-            // 
             // eVENTOTableAdapter
             // 
             this.eVENTOTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn1
+            // InformaciónBinaes
             // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.InformaciónBinaes.Controls.Add(this.label45);
+            this.InformaciónBinaes.Controls.Add(this.label44);
+            this.InformaciónBinaes.Controls.Add(this.label43);
+            this.InformaciónBinaes.Controls.Add(this.label42);
+            this.InformaciónBinaes.Controls.Add(this.label41);
+            this.InformaciónBinaes.Controls.Add(this.label40);
+            this.InformaciónBinaes.Controls.Add(this.pictureBox4);
+            this.InformaciónBinaes.Location = new System.Drawing.Point(4, 24);
+            this.InformaciónBinaes.Name = "InformaciónBinaes";
+            this.InformaciónBinaes.Padding = new System.Windows.Forms.Padding(3);
+            this.InformaciónBinaes.Size = new System.Drawing.Size(1004, 578);
+            this.InformaciónBinaes.TabIndex = 9;
+            this.InformaciónBinaes.Text = "Información";
+            this.InformaciónBinaes.UseVisualStyleBackColor = true;
             // 
-            // tituloDataGridViewTextBoxColumn
+            // pictureBox4
             // 
-            this.tituloDataGridViewTextBoxColumn.DataPropertyName = "Titulo";
-            this.tituloDataGridViewTextBoxColumn.HeaderText = "Titulo";
-            this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(33, 116);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(513, 300);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
-            // objetivosDataGridViewTextBoxColumn
+            // label40
             // 
-            this.objetivosDataGridViewTextBoxColumn.DataPropertyName = "Objetivos";
-            this.objetivosDataGridViewTextBoxColumn.HeaderText = "Objetivos";
-            this.objetivosDataGridViewTextBoxColumn.Name = "objetivosDataGridViewTextBoxColumn";
+            this.label40.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.label40.Location = new System.Drawing.Point(598, 102);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(400, 60);
+            this.label40.TabIndex = 1;
+            this.label40.Text = resources.GetString("label40.Text");
             // 
-            // cantidadAsistentesDataGridViewTextBoxColumn
+            // label41
             // 
-            this.cantidadAsistentesDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Asistentes";
-            this.cantidadAsistentesDataGridViewTextBoxColumn.HeaderText = "Cantidad_Asistentes";
-            this.cantidadAsistentesDataGridViewTextBoxColumn.Name = "cantidadAsistentesDataGridViewTextBoxColumn";
+            this.label41.Location = new System.Drawing.Point(598, 162);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(400, 67);
+            this.label41.TabIndex = 2;
+            this.label41.Text = resources.GetString("label41.Text");
             // 
-            // idAreaDataGridViewTextBoxColumn
+            // label42
             // 
-            this.idAreaDataGridViewTextBoxColumn.DataPropertyName = "id_Area";
-            this.idAreaDataGridViewTextBoxColumn.HeaderText = "id_Area";
-            this.idAreaDataGridViewTextBoxColumn.Name = "idAreaDataGridViewTextBoxColumn";
+            this.label42.Location = new System.Drawing.Point(598, 229);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(398, 52);
+            this.label42.TabIndex = 3;
+            this.label42.Text = "Según lo explicó el Jefe de Estado, el costo será de 54 millones de dólares (incl" +
+    "uyendo equipamiento y libros) y buscará ser un edificio sumamente moderno y acor" +
+    "de a los nuevos tiempos.";
             // 
-            // idImagenesDataGridViewTextBoxColumn
+            // label43
             // 
-            this.idImagenesDataGridViewTextBoxColumn.DataPropertyName = "id_Imagenes";
-            this.idImagenesDataGridViewTextBoxColumn.HeaderText = "id_Imagenes";
-            this.idImagenesDataGridViewTextBoxColumn.Name = "idImagenesDataGridViewTextBoxColumn";
+            this.label43.Location = new System.Drawing.Point(598, 281);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(400, 52);
+            this.label43.TabIndex = 4;
+            this.label43.Text = resources.GetString("label43.Text");
+            // 
+            // label44
+            // 
+            this.label44.Location = new System.Drawing.Point(601, 337);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(403, 71);
+            this.label44.TabIndex = 5;
+            this.label44.Text = resources.GetString("label44.Text");
+            // 
+            // label45
+            // 
+            this.label45.Location = new System.Drawing.Point(598, 399);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(406, 32);
+            this.label45.TabIndex = 6;
+            this.label45.Text = "La biblioteca tendrá grandes espacios para la lectura, libros de todo tipo y hast" +
+    "a auditorio, se detalló.";
+            // 
+            // ConnectInfo
+            // 
+            this.ConnectInfo.Image = ((System.Drawing.Image)(resources.GetObject("ConnectInfo.Image")));
+            this.ConnectInfo.Location = new System.Drawing.Point(816, 507);
+            this.ConnectInfo.Name = "ConnectInfo";
+            this.ConnectInfo.Size = new System.Drawing.Size(170, 51);
+            this.ConnectInfo.TabIndex = 3;
+            this.ConnectInfo.UseVisualStyleBackColor = true;
+            this.ConnectInfo.Click += new System.EventHandler(this.ConnectInfo_Click);
             // 
             // FrmPrincipal1
             // 
@@ -2242,6 +2345,9 @@ namespace proyecto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabEventos.ResumeLayout(false);
             this.tabEventos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bINAESDataSet2)).EndInit();
             this.tabSolicitarEvento.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -2276,9 +2382,8 @@ namespace proyecto
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bINAESDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eVENTOBindingSource)).EndInit();
+            this.InformaciónBinaes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2524,5 +2629,14 @@ namespace proyecto
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadAsistentesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAreaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idImagenesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TabPage InformaciónBinaes;
+        private System.Windows.Forms.Button ConnectInfo;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
