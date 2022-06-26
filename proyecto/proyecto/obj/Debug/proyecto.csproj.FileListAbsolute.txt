@@ -37,3 +37,17 @@ C:\Users\Alexander Robles\Dropbox\Universidad\Ciclo 01_2022\POO\PROYECTO-BINAES2
 C:\Users\Alexander Robles\Dropbox\Universidad\Ciclo 01_2022\POO\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.CopyComplete
 C:\Users\Alexander Robles\Dropbox\Universidad\Ciclo 01_2022\POO\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.exe
 C:\Users\Alexander Robles\Dropbox\Universidad\Ciclo 01_2022\POO\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.pdb
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\bin\Debug\proyecto.exe.config
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\bin\Debug\proyecto.exe
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\bin\Debug\proyecto.pdb
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\bin\Debug\QRCoder.dll
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.AssemblyReference.cache
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.FrmIniciodeSesion.resources
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.FrmPrincipal1.resources
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.Properties.Resources.resources
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.GenerateResource.cache
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.CoreCompileInputs.cache
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.csproj.CopyComplete
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.exe
+C:\Users\jimen\OneDrive\Documentos\Proyecto\PROYECTO-BINAES2022\proyecto\proyecto\obj\Debug\proyecto.pdb
