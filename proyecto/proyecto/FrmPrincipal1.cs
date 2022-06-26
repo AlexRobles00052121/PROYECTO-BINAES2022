@@ -130,5 +130,10 @@ namespace proyecto
         {
             tabPrincipal.SelectedIndex = 9;
         }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
